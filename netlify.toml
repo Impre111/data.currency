@@ -1,0 +1,18 @@
+[build]
+  command = "npm test"
+  functions = "netlify/functions"
+  publish = "public"
+
+[functions]
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/api/rates"
+  to = "/.netlify/functions/rates"
+  status = 200
+
+[functions.scrape-morning]
+  schedule = "*/5 13-14 * * 1-6"
+
+[functions.scrape-afternoon]
+  schedule = "*/5 20 * * 1-6"

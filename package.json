@@ -1,0 +1,16 @@
+{
+  "name": "bcv-rates-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "API serverless con las tasas del BCV (USD, EUR, CNY) y Fecha Valor",
+  "scripts": {
+    "test": "node --test",
+    "dev": "netlify dev"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^8.2.0"
+  }
+}
